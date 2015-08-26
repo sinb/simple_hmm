@@ -1,5 +1,5 @@
 project(hmm_simple)
-
-add_executable(hmm_simple main.cpp)
-
-install(TARGETS hmm_simple RUNTIME DESTINATION bin)
+include_directories(include)
+file(GLOB SOURCES "src/*.cpp")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+add_executable(hmm_simple ${SOURCES})
