@@ -8,7 +8,7 @@
 using namespace std;
 class HMM
 {
-public:
+private:
   int length_states;
   int length_obs;
   string *states;
@@ -16,8 +16,7 @@ public:
   map<string, double> start_probability;
   map<string, map<string, double>> transition_probability;
   map<string, map<string, double>> emission_probability;
-//   map<string, double*> weight;
-//   map<string, string*> path;
+public:
   HMM(int length_states, int length_obs, string *states, string *observations, 
       map<string, double> start_probability, map<string, map<string, double>> transition_probability,
 	map<string, map<string, double>> emission_probability);
